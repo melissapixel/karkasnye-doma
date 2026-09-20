@@ -26,20 +26,25 @@ span {
   font-size: clamp(14px, calc(1rem + 1vw), 16px);
   line-height: 22.4px;
   letter-spacing: -0.02em;
+  display: block;
 }
-button {
-  border-radius: 200px;
-  padding: 8px 18px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #fff;
-  background-color: $grey;
-  transition: background-color 0.2s;
-  font-weight: 400;
-  font-style: normal;
+.span-mini {
+  font-size: 12px;
+}
+a {
+  text-decoration: none;
+  line-height: 16px;
+  color: #000;
+}
+ul {
+  li {
+    list-style: none;
+  }
 }
 
 .container {
-  width: $container;
+  max-width: $container;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
