@@ -1,2 +1,45 @@
 @use "../variables" as *;
 @use "../mixins" as *;
+
+
+.button-accent {
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  background-color: $grey;
+  cursor: pointer;
+  border-radius: 200px;
+  padding: 8px 18px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  transition: background-color 0.2s;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  border: 1px solid #989898;
+  border-radius: 28px;
+  padding: 11px;
+  background: none;
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    fill: #000;
+    pointer-events: none;
+  }
+
+  @include laptop-down {
+    padding: 8px;
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
