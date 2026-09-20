@@ -31,6 +31,9 @@ span {
 .span-mini {
   font-size: 12px;
 }
+.add {
+  color: #989898;
+}
 a {
   text-decoration: none;
   line-height: 16px;
@@ -40,6 +43,10 @@ ul {
   li {
     list-style: none;
   }
+}
+b {
+  font-weight: bolder;
+  color: $accent;
 }
 
 .container {
