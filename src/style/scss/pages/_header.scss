@@ -1,0 +1,143 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.header {
+  .red-notice {
+    background-color: #BE0202;
+    color: white;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      .red-notice__close {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .header__container {
+    display: flex;
+    flex-direction: column;
+
+    .header__wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      gap: 18px;
+      margin-bottom: 24px;
+      margin-top: 20px;
+
+      .wrapper__left {
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+        align-items: end;
+        .location {
+          padding-right: 11px;
+          color: #000013;
+        }
+      }
+
+      .wrapper__right {
+        display: flex;
+        gap: 20px;
+        // white-space: nowrap;
+        margin-top: 10px;
+        .right__list, .button__list {
+          display: flex;
+          gap: 24px;
+          align-items: center;
+          .list__phone {
+            font-weight: 400;
+          }
+          .button-icon.last {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .navigation {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+
+
+@include laptop-down {
+  .header {
+    .header__container {
+      .header__wrapper {
+        justify-content: space-between;
+
+        .wrapper__right {
+          .right__list {
+            flex-direction: column;
+            gap: 4px;
+            .list__phone {
+              .span-mini {
+                display: none;
+              }
+            }
+          }
+          .button__list {
+            flex-direction: row;
+            .button-accent {
+              display: none;
+            }
+            .button-icon.last {
+              display: block;
+              color: #fff;
+              background-color: #353f47;
+            }
+          }
+        }
+      }
+
+      .navigation {
+        ul {
+          justify-content: center;
+          gap: 9px;
+        }
+      }
+    }
+  }
+}
+
+
+
+@include tablet-down {
+  .header {
+    .header__container {
+      .header__wrapper {
+
+        .wrapper__left {
+          flex-direction: column;
+          align-items: start;
+          gap: 6px;
+          .location {
+            padding-right: 0px;
+          }
+        }
+
+        .wrapper__right {
+          .right__list {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .navigation {
+      display: none;
+    }
+  }
+}
