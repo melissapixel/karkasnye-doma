@@ -1,0 +1,168 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.catalog {
+  .container {
+    
+    .advantages {
+      padding: 40px 0;
+      .advantages__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        background-color: #F0F3F9;
+        padding: 24px;
+        border-radius: 24px;
+        .advantages-item {
+          background-color: #D6E9D5;
+          border-radius: 16px;
+          padding: 12px 10px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          min-height: 84px;
+          .advantages-item__icon {
+            width: 80px;
+            height: 80px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    .approach {
+      padding: 60px 0;
+      h2 {
+        margin-bottom: 40px;
+      }
+      .approach__table {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        .approach__header, .approach__row {
+          display: grid;
+          grid-template-columns: 0.8fr 1.2fr 1.2fr;
+          // gap: 20px;
+          gap: clamp(12px, calc(1rem + 1vw), 20px);;
+          .col {
+            border-radius: 8px;
+            padding: 12px;
+            font-weight: 600;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .col-title {
+            background-color: #F0F3F9;
+          }
+          .col-title--accent {
+            background: $accent;
+            color: #ffffff;
+          }
+          .cell {
+            font-weight: 500;
+            justify-content: center;
+            text-align: center;
+            border-radius: 12px;
+            padding: 20px 24px;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            background-color: #F0F3F9;
+            color: #353F47;
+          }
+          .cell--accent {
+            background-color: #E2EFE0;
+          }
+        }
+      }
+    }
+
+    .project-catalog {
+      h2 {
+        margin-bottom: 16px;
+      }
+      .project-catalog__list {
+        display: flex;
+        flex-direction: row;
+        gap: 12px 24px;
+        justify-content: space-between;
+        list-style: none;
+        padding-bottom: 12px;
+        button {
+          background-image: url('../../img/bg/ipoteka-bg.png');
+          background-size: 90px;
+          background-position: 10px center;
+          display: flex;
+          flex-direction: column;
+          background-color: #F5F3F1;
+          padding: 24px 24px 24px 110px;
+          background-repeat: no-repeat;
+          min-height: 165px;
+          box-sizing: border-box;
+          min-width: 365px;
+          cursor: pointer;
+          gap: 8px;
+          border: none;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+
+
+@include laptop-down {
+  .catalog {
+    .container {
+
+      .advantages {
+        .advantages__container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .project-catalog {
+        .project-catalog__list {
+          gap: 8px;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
+
+@include tablet-down {
+  .catalog {
+    .container {
+
+      .advantages {
+        .advantages__container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      .approach {
+        .approach__table {
+          .approach__header, .approach__row {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+
+      .project-catalog {
+        .project-catalog__list {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
