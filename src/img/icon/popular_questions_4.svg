@@ -1,0 +1,11 @@
+<svg width="101" height="67" viewBox="0 0 101 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.8661 1H3C1.89543 1 1 1.89543 1 3V64C1 65.1046 1.89543 66 3 66H24.8661M24.8661 1H50.5M24.8661 1V66M50.5 66V1M50.5 66H24.8661M50.5 66H75.25M50.5 1H75.25M75.25 1H98C99.1046 1 100 1.89543 100 3V16.8108V52.8243V64C100 65.1046 99.1046 66 98 66H75.25M75.25 1V66" stroke="white"/>
+<rect x="9.5" y="33.5" width="6" height="20" rx="0.5" stroke="white"/>
+<rect x="34.5" y="33.5" width="6" height="20" rx="0.5" stroke="white"/>
+<rect x="59.5" y="33.5" width="6" height="20" rx="0.5" stroke="white"/>
+<rect x="84.5" y="33.5" width="6" height="20" rx="0.5" stroke="white"/>
+<path d="M5 18H20" stroke="white" stroke-linecap="round"/>
+<path d="M30 18H44" stroke="white" stroke-linecap="round"/>
+<path d="M56 18H70" stroke="white" stroke-linecap="round"/>
+<path d="M81 18H95" stroke="white" stroke-linecap="round"/>
+</svg>

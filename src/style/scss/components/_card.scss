@@ -1,0 +1,140 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.card-product-01, .card-product-02 {
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F3F1;
+  overflow: hidden;
+  cursor: pointer;
+  width: 373px;
+  
+  .card-product__img {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .top-project {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      padding: 10px 15px 4px 10px;
+      background: $accent;
+      color: #FFFFFF;
+    }
+    .top-project::after {
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      bottom: 0px;
+      left: 0px;
+      border: 20px solid transparent;
+      border-left: 75px solid $accent;
+      border-top: 0px solid $accent;
+      transform: translateY(100%);
+      box-sizing: border-box;
+    }
+    .fav {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: $accent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .video {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background-color: #FFF2D4;
+      color: $grey;
+      font-size: 13px;
+      font-weight: 400;
+      padding: 8px 16px;
+      border-radius: 4px;
+      pointer-events: none;
+    }
+  }
+  .card-product__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    .card-product__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    h3 {
+      margin: 0 0 5px 0;
+    }
+  }
+  .card-product__wrapper {
+    padding: 12px;
+    .wrapper__header {
+      font-size: 13px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      h3 {
+        font-size: 13px;
+      }
+      time {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+    }
+    .wrapper__end {
+      margin-top: 8px;
+    }
+  }
+}
+
+@include laptop-down {
+  .card-product-02 {
+    width: 100%;
+  }
+}
+
+
+.card-holder {
+  padding: 16px 24px;
+  box-sizing: border-box;
+  max-height: min-content;
+  max-width: 275px;
+
+  img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  .card-holder__list {
+    padding: 16px 0px 0px 20px;
+    li {
+      margin: 0px 0px 8px;
+    }
+  }
+}
+.card-holder.light {
+  background-color: #FFFFFF;
+  margin-bottom: 50px;
+}
+.card-holder.dark {
+  background-color: #1D8119;
+  color: #FFFFFF;
+  margin-top: 50px;
+}
