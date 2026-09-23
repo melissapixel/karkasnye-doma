@@ -1,0 +1,60 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.project-miss {
+  padding: 48px 0px;
+  background-image: url("../../img/bg/miss.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 35px;
+  .container {
+    h2 {
+      margin-bottom: 12px;
+    }
+    span {
+      margin-bottom: 32px;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      .point {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background-color: white;
+        padding: 24px;
+        border-radius: 16px;
+        h3 {
+          line-height: 1.1;
+        }
+        p {
+          margin-bottom: 24px;
+        }
+        .button-accent {
+          text-align: center;
+          background: $accent;
+        }
+      }
+    }
+  }
+  span.add {
+    margin: 24px 0px 0px 0px;
+    text-align: center;
+  }
+}
+
+
+
+@include laptop-down {
+  .project-miss {
+    .container {
+      .list {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
