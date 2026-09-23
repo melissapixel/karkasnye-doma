@@ -1,0 +1,33 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.popular-questions {
+  background-color: #F5F3F1;
+  padding: 48px 0px 60px;
+  margin-bottom: 120px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .popular-questions__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 31px;
+      
+      @include laptop-down {
+        grid-template-columns: repeat(2, 1fr);
+        .card-holder {
+          max-width: 100%;
+        }
+      }
+      @include tablet-down {
+        display: flex;
+        flex-direction: column;
+        .card-holder {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
