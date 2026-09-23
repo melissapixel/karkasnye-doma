@@ -238,6 +238,8 @@
         }
       }
     }
+
+
     .catalog__wrapper.last {
       justify-content: end;
       .catalog__cards {
@@ -300,6 +302,23 @@
           li {
             margin: 0px 0px 8px 0px;
           }
+        }
+      }
+    }
+
+    .catalog__recomended {
+      margin-bottom: clamp(80px, calc(1rem + 1vw), 120px);
+      h2 {
+        margin: 0 0 12px;
+      }
+      .cards {
+        padding: 0 26px;
+        display: flex;
+        overflow: auto;
+        
+        .card-product-02 {
+          margin-right: 12px;
+          flex-shrink: 0;
         }
       }
     }
