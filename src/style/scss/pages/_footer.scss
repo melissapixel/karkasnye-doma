@@ -1,0 +1,54 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.footer {
+  padding: clamp(32px, calc(1rem + 1vw), 60px) 0;
+  background-color: #f5f3f1;
+  .container {
+    display: flex;
+    flex-direction: column;
+      .wrapper__top {
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .point {
+          .title {
+            margin-bottom: 24px;
+          }
+          .point__list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+          }
+
+        }
+      }
+
+      .wrapper__bottom {
+        .wrapper__cities {
+          margin-bottom: 32px;
+          border-bottom: 1px solid #989898;
+          padding-bottom: 32px;
+        }
+        .footer__copyright, .footer__desc, .footer__policy {
+          margin-bottom: 8px;
+          color: #333;
+          line-height: 13px;
+        }
+      }
+  }
+}
+
+
+
+@include laptop-down {
+  .footer {
+    .container {
+      .wrapper__top {
+        flex-direction: column;
+      }
+    }
+  }
+}
